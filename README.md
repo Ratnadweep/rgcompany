@@ -43,9 +43,6 @@ terraform-project/
 │
 └── README.md
 
-````
-
----
 
  Detailed Concepts & Components
 
