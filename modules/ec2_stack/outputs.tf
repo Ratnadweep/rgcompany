@@ -1,7 +1,15 @@
-output "instance_public_ips" {
-  value = { for k, inst in aws_instance.demo-server : k => inst.public_ip }
+output "vpc_id" {
+  value = aws_vpc.dpp-vpc.id
 }
 
-output "instance_ids" {
-  value = { for k, inst in aws_instance.demo-server : k => inst.id }
+output "public_subnet_01_id" {
+  value = aws_subnet.dpp-public-subnet-01.id
+}
+
+output "public_subnet_02_id" {
+  value = aws_subnet.dpp-public-subnet-02.id
+}
+
+output "demo_sg_id" {
+  value = aws_security_group.demo-sg.id
 }
